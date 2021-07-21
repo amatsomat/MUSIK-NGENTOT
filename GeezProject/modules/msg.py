@@ -20,25 +20,25 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Selamat datang kembali di {PROJECT_NAME}
+**Hey 👋 SELAMAT DATANG KONTOL {PROJECT_NAME}
 
-✣️ {PROJECT_NAME} dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.
+✣️ {PROJECT_NAME} LU BISA PLAY LAGI DI GRUP YA AJG.
 
-✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
+✣️ INI ASISTEN NYA KNTL » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
 
 """,
 
 f"""
-**Pengaturan**
+**BACA INI KONTOL**
 
-1. Jadikan bot sebagai admin
-2. Mulai obrolan suara / VCG
-3. Ketik `/userbotjoin` dan coba /play <nama lagu>
+1. BOT NYA JADIIN ADMIN DULU GBLK
+2. MULAI OS / VCG
+3. KETIK `/userbotjoin` DAN COBA REQ /play <nama lagu>
 × Jika Assistant Bot bergabung selamat menikmati musik, 
 × Jika Assistant Bot tidak bergabung Silahkan Tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
 
 
-**» Perintah Untuk dalam grup Member Juga Bisa :**
+**» DIBACA YA KONTOL :**
 
  × /playlist : Untuk Menampilkan daftar putar Lagu sekarang
  × /current : Untuk Menunjukkan  Lagu sekarang yang sedang diputar
@@ -49,7 +49,7 @@ f"""
  × /saavn <judul lagu> : Untuk Mendownload lagu dari website saavn
  × /search <judul lagu> : Untuk Mencari Video di YouTube dengan detail
 
-**» Perintah Hanya Untuk Admin :**
+**» PERINTAH ADMIN :**
 
 × /play <judul lagu> : Untuk Memutar lagu yang Anda minta melalui youtube
 × /play <link yt> : Untuk Memutar lagu yang Anda minta melalui link youtube
