@@ -46,7 +46,7 @@ async def pause(_, message: Message):
         await message.reply_text("❗ **Nothing is playing!**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ **Paused!**")
+        await message.reply_text("▶️ **CROT BERHENTI!**")
 
 
 @Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
@@ -67,7 +67,7 @@ async def resume(_, message: Message):
         await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ **Resumed!**")
+        await message.reply_text("⏸ **KEKUATAN KONTOLL!**")
 
 
 @Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
@@ -83,7 +83,7 @@ async def stop(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
+        await message.reply_text("❗ **GADA LAGU YANG DIPUTAR NGENTOT !**")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -91,7 +91,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ **Memberhentikan Lagu!**")
+        await message.reply_text("❌ **LAGU BERHENTI NGENTOT!**")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -108,7 +108,7 @@ async def skip(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ **Tidak ada Lagu Selanjutnya untuk dilewati!**")
+        await message.reply_text("❗ **GADA LAGU NGENTOT!**")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -119,7 +119,7 @@ async def skip(_, message: Message):
                 chat_id, callsmusic.queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("⏩ **Melewati lagu saat ini!**")
+        await message.reply_text("⏩ **SABAR KONTOL JGN MAIN SKIP!**")
 
 
 @Client.on_message(filters.command("channeladmincache"))
@@ -142,4 +142,4 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ **Daftar admin** telah **diperbarui**")
+    await message.reply_text("✅️ **ADMIN NGENTOT** TELAH **DIPERBARUI**")
