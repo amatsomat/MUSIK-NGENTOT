@@ -37,7 +37,7 @@ async def pause(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("**Apakah obrolan terhubung?**")
+      await message.reply("**Apakah kita terhubung?**")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
@@ -46,7 +46,7 @@ async def pause(_, message: Message):
         await message.reply_text("❗ **Nothing is playing!**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ **CROT BERHENTI!**")
+        await message.reply_text("▶️ **berhenti berjuang!**")
 
 
 @Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
@@ -58,7 +58,7 @@ async def resume(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("**Apakah obrolan terhubung?**")
+      await message.reply("**Apakah kita terhubung?**")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
@@ -67,7 +67,7 @@ async def resume(_, message: Message):
         await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ **KEKUATAN KONTOLL!**")
+        await message.reply_text("⏸ **mulai dari nol!**")
 
 
 @Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
@@ -79,11 +79,11 @@ async def stop(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("**Apakah obrolan terhubung?**")
+      await message.reply("**Apakah kita terhubung?**")
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ **GADA LAGU YANG DIPUTAR NGENTOT !**")
+        await message.reply_text("❗ **gada perjuangan yang sia sia!**")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -91,7 +91,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ **LAGU BERHENTI NGENTOT!**")
+        await message.reply_text("❌ **lagu sudah berhenti berjuang !**")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -104,11 +104,11 @@ async def skip(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("**Apakah obrolan terhubung?**")
+      await message.reply("**Apakah kita terhubung?**")
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ **GADA LAGU NGENTOT!**")
+        await message.reply_text("❗ **gada yg serius!**")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -119,7 +119,7 @@ async def skip(_, message: Message):
                 chat_id, callsmusic.queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("⏩ **SABAR KONTOL JGN MAIN SKIP!**")
+        await message.reply_text("⏩ **sabar ya dia udh bahagia !**")
 
 
 @Client.on_message(filters.command("channeladmincache"))
@@ -130,7 +130,7 @@ async def admincache(client, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("**Apakah obrolan terhubung?**")
+      await message.reply("**Apakah kita terhubung?**")
       return
     set(
         chid,
@@ -142,4 +142,4 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ **ADMIN NGENTOT** TELAH **DIPERBARUI**")
+    await message.reply_text("✅️ **perjuangan admin** telah **berakhir**")
