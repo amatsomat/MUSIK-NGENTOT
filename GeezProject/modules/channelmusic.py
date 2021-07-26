@@ -118,9 +118,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "cskip"),
             ],
             [
-                InlineKeyboardButton("LAGU MMK", "cplaylist"),
+                InlineKeyboardButton("perjuangin", "cplaylist"),
             ],
-            [InlineKeyboardButton("❌ TUTUP AJG", "ccls")],
+            [InlineKeyboardButton("❌ berhenti", "ccls")],
         ]
     )
 
@@ -306,9 +306,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "cskip"),
                 ],
                 [
-                    InlineKeyboardButton("LAGU MMK", "cplaylist"),
+                    InlineKeyboardButton("perjuangin", "cplaylist"),
                 ],
-                [InlineKeyboardButton("❌ TUTUP KONTOL", "ccls")],
+                [InlineKeyboardButton("❌ berhenti", "ccls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -350,7 +350,7 @@ async def m_cb(b, cb):
 @authorized_users_only
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **TUNGGU YA AJG**")
+    lel = await message.reply("🔄 **sabar semua butuh proses**")
 
     try:
       conchat = await _.get_chat(message.chat.id)
@@ -469,7 +469,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **TUNGGU AJG**")
+        await lel.edit("🎵 **bersabar**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -495,14 +495,14 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 DAFTAR MMK", callback_data="cplaylist"),
+                    InlineKeyboardButton("📖 daftar perjuangan", callback_data="cplaylist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ CROTT", callback_data="ccls")],
+                [InlineKeyboardButton(text="❌ cape ya", callback_data="ccls")],
             ]
         )
         requested_by = message.from_user.first_name
